@@ -43,6 +43,11 @@ html{
     margin: 20px;
   }
 
+  .btn{
+    white-space: normal !important;
+    word-wrap: break-word;
+  }
+
 .main{
     margin-top: 10px;
     padding: 0px !important;

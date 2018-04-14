@@ -13,19 +13,19 @@ import { ConfirmEmailComponent } from './confirmemail/index';
 import { FlashComponent } from './flash/index';
 
 const appRoutes: Routes = [
-    { path: 'listing', component: HomeComponent,  },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactUsComponent },
-    { path: 'forgotpassword', component: ForgotPasswordComponent },
-    { path: 'resetpassword', component: ResetPasswordComponent },
-    { path: 'confirmemail', component: ConfirmEmailComponent },
-    { path: 'story', component: StoryComponent,canActivate: [AuthGuard] },
-    { path: 'home', component: FlashComponent },
+    { path: 'listing', component: HomeComponent,data: { title: 'listing' }  },
+    { path: 'login', component: LoginComponent,data: { title: 'login' } },
+    { path: 'register', component: RegisterComponent,data: { title: 'register' } },
+    { path: 'about', component: AboutComponent,data: { title: 'about' } },
+    { path: 'contact', component: ContactUsComponent,data: { title: 'contact' } },
+    { path: 'forgotpassword', component: ForgotPasswordComponent,data: { title: 'forgot password' } },
+    { path: 'resetpassword', component: ResetPasswordComponent,data: { title: 'reset password' } },
+    { path: 'confirmemail', component: ConfirmEmailComponent,data: { title: 'conform email' } },
+    { path: 'story', component: StoryComponent,canActivate: [AuthGuard],data: { title: 'story' } },
+    { path: 'home', component: FlashComponent,data: { title: 'home' } },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: 'home',data: { title: 'homr' } }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

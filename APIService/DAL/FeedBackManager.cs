@@ -4,6 +4,7 @@ using APIService.Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Http;
 
@@ -20,7 +21,7 @@ namespace APIService.DAL
 
         public StoryModel GetFeedBacks(int currentPage,int pageSize)
         {
-
+            Thread.Sleep(5000);
             using (_context)
             {
                 var model= new StoryModel

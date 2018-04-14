@@ -37,3 +37,9 @@ To build for production
 
 To Generate component
 ng generate component [name]
+
+## Useful plugins and urls
+For Loader : https://medium.com/letsboot/lets-add-a-progress-bar-to-angular-4-apps-using-ngx-progressbar-45a2a1089d4e
+
+##Dynamic page title
+https://toddmotto.com/dynamic-page-titles-angular-2-router-events

@@ -1,7 +1,8 @@
 import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, BrowserXhr } from '@angular/http';
+import { NgProgressModule,NgProgressBrowserXhr  } from 'ngx-progressbar';
 
 // used to create fake backend
 //import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -32,6 +33,7 @@ import { FlashComponent } from './flash/flash.component';
         BrowserModule,
         FormsModule,
         HttpModule,
+        NgProgressModule,
         routing,
     ],
     declarations: [
@@ -55,7 +57,9 @@ import { FlashComponent } from './flash/flash.component';
         UserService,
         StoryService,
         PagerService,
-        ContactUsService
+        ContactUsService,
+        Title,
+        {provide: BrowserXhr, useClass: NgProgressBrowserXhr}
     ],
     bootstrap: [AppComponent]
 })
