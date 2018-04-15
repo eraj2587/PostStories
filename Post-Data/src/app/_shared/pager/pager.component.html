@@ -1,0 +1,17 @@
+<ul *ngIf="pagerMain.pages && pagerMain.pages.length" class="pagination">
+  <li>
+      <a (click)="onClick(1)" [ngClass]="{disabled:pagerMain.currentPage === 1}" class="" >First</a>
+  </li>
+  <li>
+      <a (click)="onClick(pagerMain.currentPage - 1)"  [ngClass]="{disabled:pagerMain.currentPage === 1}">Prev</a>
+  </li>
+  <li *ngFor="let page of pagerMain.pages">
+      <a (click)="onClick(page)"  [ngClass]="{active:pagerMain.currentPage === page}" >{{page}}</a>
+  </li>
+  <li >
+      <a (click)="onClick(pagerMain.currentPage + 1)" [ngClass]="{disabled:pagerMain.currentPage === pagerMain.totalPages}">Next</a>
+  </li>
+  <li>
+      <a (click)="onClick(pagerMain.totalPages)"  [ngClass]="{disabled:pagerMain.currentPage === pagerMain.totalPages}">Last</a>
+  </li>
+</ul>

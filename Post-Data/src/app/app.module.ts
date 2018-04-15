@@ -26,6 +26,7 @@ import { PagerService } from './_services/pager.service';
 import { ResetPasswordComponent } from './resetpassword/index';
 import { ConfirmEmailComponent } from './confirmemail/index';
 import { FlashComponent } from './flash/flash.component';
+import { PagerComponent } from './_shared/pager/pager.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { FlashComponent } from './flash/flash.component';
         ForgotPasswordComponent,
         ResetPasswordComponent,
         ConfirmEmailComponent,
-        FlashComponent
+        FlashComponent,
+        PagerComponent
     ],
     providers: [
         AuthGuard,

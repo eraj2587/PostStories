@@ -21,7 +21,6 @@ namespace APIService.DAL
 
         public StoryModel GetFeedBacks(int currentPage,int pageSize)
         {
-            Thread.Sleep(5000);
             using (_context)
             {
                 var model= new StoryModel

@@ -32,6 +32,10 @@ export class HomeComponent implements OnInit {
        this.setPage(1);
     }
 
+    onPageClicked(pageNumber: string): void {
+        this.setPage(Number(pageNumber));
+    }
+
     setPage(page: number) {
         if (page < 1 || page > this.pager.totalPages) {
             return;
@@ -39,7 +43,6 @@ export class HomeComponent implements OnInit {
         // get pager object from service
         this.assignStories(page,5)
        // this.pager = this.pagerService.getPager(this.allItems, page,5);
-        
     }
 
     assignStories(currentPage:number,pageSize:number){
