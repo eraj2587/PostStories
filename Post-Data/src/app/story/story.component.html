@@ -1,5 +1,5 @@
 <div class="col-md-12">
-        <h2 style="margin-bottom: 30px;">Tell your story</h2>
+        <div class="subTitle">Tell your story</div>
         <form name="form"  (ngSubmit)="f.form.valid && postData()" #f="ngForm" novalidate>
             <div class="form-group"  [ngClass]="{ 'has-error': f.submitted}">
                  <textarea class="form-control"  name="data" rows="10" [(ngModel)]="model.data"

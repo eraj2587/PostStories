@@ -3,6 +3,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule, BrowserXhr } from '@angular/http';
 import { NgProgressModule,NgProgressBrowserXhr  } from 'ngx-progressbar';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 // used to create fake backend
 //import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -61,7 +62,7 @@ import { PagerComponent } from './_shared/pager/pager.component';
         PagerService,
         ContactUsService,
         Title,
-        {provide: BrowserXhr, useClass: NgProgressBrowserXhr}
+        {provide: BrowserXhr, useClass: NgProgressBrowserXhr},
     ],
     bootstrap: [AppComponent]
 })

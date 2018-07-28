@@ -1,8 +1,9 @@
 <div class="col-md-12">
-        <h2 style="margin-bottom: 30px;">Contact us</h2>
-        <h6 style="font-weight: bold;margin-bottom:20px;">We want to hear from you! For any concerns/queries please send an email to <a style="color:blue" href="mailto:admin@kindacts.in?Subject=KindActs:Query">admin@kindacts.in</a></h6>
+        <div class="subTitle">Contact us</div>
+        <div class="content">We want to hear from you! For any concerns/queries please send an email to 
+            <a class="links" href="mailto:admin@kindacts.in?Subject=KindActs:Query">admin@kindacts.in</a></div>
        <div *ngIf="auth.isLoggedIn()">
-            <h6 style="font-weight: bold;margin-bottom:20px;">Alternatively you can post your thoughts below</h6>
+            <div class="content" style="margin-bottom:20px;">Alternatively you can post your thoughts below</div>
             <form name="form"  (ngSubmit)="f.form.valid && postData()" #f="ngForm" novalidate>
                     <div class="form-group"  [ngClass]="{ 'has-error': f.submitted}">
                          <textarea class="form-control"  name="data" rows="5" [(ngModel)]="model.data"

@@ -15,17 +15,19 @@ html{
 
  body{
     background-repeat: no-repeat;
-    background-color: #d3d3d3;
+    background-color: white !important;
     font-family: 'Oxygen', sans-serif;
-    color: white;
-    background-image:url("./assets/kid4.jpg");
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-       height: 100%;
-       margin-bottom: 60px;
+    color: black;
+    /* background-image:url("./assets/kid4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    height: 100%;
+}
+
+.links{
+  color: #dc3545;
 }
 
 #footer {
@@ -33,11 +35,12 @@ html{
     left: 0;
     right: 0;
     width: 100%;
-    position: absolute;
+    position: relative;
     min-height: 60px;
-    background-color: #353a40;
-    color: white;
+    color: black;
     margin: 10px 0px 0px 0px;
+    border-top: #353a40 solid thin;
+    
   }
   .footer-block {
     margin: 20px;
@@ -46,11 +49,20 @@ html{
   .btn{
     white-space: normal !important;
     word-wrap: break-word;
+    border-radius: 0 !important;
   }
 
 .main{
-    margin-top: 10px;
-    padding: 0px !important;
+  position: relative;
+    margin-top: 40px 0px 50px 0px;
+    padding: 20px 0px !important;
+}
+
+.subTitle{
+  color: #dc3545;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 h1.title { 
@@ -138,6 +150,7 @@ input::-webkit-input-placeholder {
  /*Pagination*/
  .pagination{
     font-size: 10px; 
+    margin: 20px 0px;
  }
 
  .pagination:hover{
@@ -152,7 +165,7 @@ input::-webkit-input-placeholder {
    color:black;
    margin-left: 5px;
    padding: 5px;
-   border-radius:5px;
+   border-radius: 0 !important;
    border-color:white;
    border-width: 2px;
 }
@@ -164,7 +177,7 @@ input::-webkit-input-placeholder {
     color: white;
     margin-left: 5px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 0 !important;
     border-color:dc3545;
     border-width: 2px;
  }
@@ -176,14 +189,13 @@ input::-webkit-input-placeholder {
     color: darkgray;
     margin-left: 5px;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 0 !important;
     border-color:white;
     border-width: 2px;
  }
 
 /*rounded corner articles with folded corner */
 .ribbon {
-   fill: rgba(20, 235, 206, 0.849);
     position: relative;
     line-height: 40px;
     padding: 20px 20px;
@@ -191,20 +203,9 @@ input::-webkit-input-placeholder {
     color: rgb(20, 19, 19);
     font-weight: 100;
     margin-bottom: 10px;
-    background-color: rgba(12, 192, 168, 0.726);
-    border-radius: 5px;
+    background-color:rgba(187, 229, 235, 0.89)
   }
   
-  /***
-  * The below css is only used to 
-  * style this example and is not 
-  * needed outside of this demo
-  * https://codepen.io/Presto/pen/Ajkte
-  ***/
-  body {
-    background-color: #EEEBDC;
-    padding: 25px;
-  }
   
   h1 {
     font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -229,3 +230,17 @@ a{
   font-weight: bold;
 }
 
+.content{
+  font-family: inherit;
+}
+
+ 
+
+.fontColor{
+  color: white;
+  font-weight: bold;
+}
+
+.active{
+  color:  #dc3545;
+}
