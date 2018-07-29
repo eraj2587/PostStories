@@ -11,6 +11,7 @@ a {
 html{
   min-height: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
  body{
@@ -24,6 +25,8 @@ html{
     background-size: cover;
     background-attachment: fixed; */
     height: 100%;
+    overflow-x: hidden;
+    position: relative
 }
 
 .links{
@@ -38,7 +41,7 @@ html{
     position: relative;
     min-height: 60px;
     color: black;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 10px 0px;
     border-top: #353a40 solid thin;
     
   }
@@ -63,6 +66,7 @@ html{
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 h1.title { 
