@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using APIService.Providers;
-using APIService.Models;
 using APIService.Persistence;
 
 namespace APIService
@@ -60,11 +56,11 @@ namespace APIService
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "358294886500-jdq2m6a4r1n6q69g2vjg4odeitm5raf9.apps.googleusercontent.com",
+                ClientSecret = "mlX6auIbGHHhJ9WKEKDVBdVF"
+            });
         }
     }
 }

@@ -36,15 +36,14 @@ export class LoginComponent implements OnInit {
                 },
                 error => {
                     let errormessage='';
+                    this.loading = false;
                     if (error.status === 400) {
                         // handle validation error
                         let body = JSON.parse(error._body);
                         errormessage=body.error_description;
-                            this.alertService.error(errormessage);
-                            this.loading = false;
+                        this.alertService.error(errormessage);
                     } else {
                         this.alertService.error('Something went wrong : '+errormessage);
-                        this.loading = false;
                     }
                 });
     }
